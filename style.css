@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    line-height: 1.7;
+    overflow-x: hidden;
+
+    animation: fadeIn 0.7s ease;
+}
+
+/* PAGE FADE ANIMATION */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HEADER */
+
+header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+
+    background: linear-gradient(
+        to right,
+        #7c3aed,
+        #ec4899
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* NAVIGATION */
+
+nav a {
+    text-decoration: none;
+    color: #334155;
+
+    margin-left: 25px;
+    font-weight: 500;
+
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ec4899;
+}
+
+nav a::after {
+    content: '';
+
+    position: absolute;
+    width: 0;
+    height: 2px;
+
+    background: #ec4899;
+
+    left: 0;
+    bottom: -5px;
+
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+.hero-content h1 span {
+
+    background: linear-gradient(
+        to right,
+        #8b5cf6,
+        #ec4899
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    max-width: 750px;
+    margin: auto;
+
+    font-size: 20px;
+    color: #64748b;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+
+    margin-top: 35px;
+    padding: 14px 35px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    background: linear-gradient(
+        to right,
+        #8b5cf6,
+        #ec4899
+    );
+
+    color: white;
+
+    transition: 0.4s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(236,72,153,0.3);
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 85%;
+    margin: auto;
+
+    padding: 80px 0;
+}
+
+/* SECTION TITLE */
+
+.section-title {
+    text-align: center;
+
+    font-size: 48px;
+    margin-bottom: 50px;
+
+    background: linear-gradient(
+        to right,
+        #8b5cf6,
+        #ec4899
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CARD */
+
+.card {
+    background: white;
+
+    padding: 35px;
+    margin-bottom: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* SKILLS */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.skill-box {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+    transition: 0.4s;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+}
+
+.skill-box h3 {
+    color: #8b5cf6;
+    margin-bottom: 15px;
+}
+
+/* CONTACT */
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+/* FOOTER */
+
+footer {
+    background: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+
+    color: #64748b;
+
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.03);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+}
